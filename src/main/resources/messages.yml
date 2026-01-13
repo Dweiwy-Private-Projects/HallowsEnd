@@ -1,0 +1,261 @@
+# ===================================================================
+#                Hallow's End Plugin Messages
+# This file uses the MiniMessage format for all text.
+# ===================================================================
+
+# The prefix that appears before most plugin messages.
+prefix: "<gray></gray> "
+
+# -------------------------------------------------------------------
+# Command Feedback Messages
+# -------------------------------------------------------------------
+commands:
+  # General command messages
+  no-permission: "<red>You do not have permission to use this command.</red>"
+  reload: "<green>Configuration and messages have been reloaded.</green>"
+  rejoin-success-broadcast: "<gray>Event <dark_gray>| <green><player> has reconnected and returned to the event!</green></gray>"
+
+  # For the /he join command
+  already-in-game: "<red>You are already participating in the event!"
+  staff-cannot-join: "<red>Staff members with the bypass permission cannot join the event."
+  command-for-players-only: "<red>This command can only be used by players."
+  join-success-player: "<green>You have joined the Hallow's End event!"
+  join-success-broadcast: "<yellow><player> has joined the event!"
+  join-spectator: "<gray>You have joined as a spectator because the event is in a late phase."
+
+  # For the /he give command
+  artifact-given-sender: "<green>Gave artifact <artifact> to <player>."
+  artifact-given-player: "<green>An admin has granted you the <artifact><green>."
+  artifact-invalid: "<red>Invalid artifact ID: '<yellow><artifact_id><red>'.</red>"
+  player-not-found: "<red>Player '<yellow><player><red>' not found.</red>"
+
+# -------------------------------------------------------------------
+# Game State & Phase Messages
+# -------------------------------------------------------------------
+game-state:
+  start: "<gold>The Hallow's End event has begun! Good luck.</gold>"
+  stop: "<gold>The Hallow's End event has been stopped by an admin.</gold>"
+  already-running: "<red>The event is already running.</red>"
+  not-running: "<red>The event is not currently running.</red>"
+  intro:
+    title: "<dark_gray>Hallow's End"
+    subtitle: "<gray>The story is about to begin..."
+    broadcast:
+      - ""
+      - "<gray><!i>An old tale begins to unfold..."
+      - ""
+
+  # Phase announcements
+  phase-1:
+    title: "<gray>Phase 1"
+    subtitle: "<dark_gray>The Eerie Calm"
+    broadcast:
+      - ""
+      - "<st>                                                                                </st>"
+      - "                      <bold><gray>PHASE 1: THE EERIE CALM</bold>"
+      - ""
+      - "<gray>The village is unnervingly quiet, but the air is thick with dread. This is your only chance to prepare before the horrors awaken."
+      - ""
+      - "  <white>Objective:</white> <gold>Scavenge the village for weapons, armor, and supplies."
+      - "  <white>Threats:</white> <gray>None... for now."
+      - "<st>                                                                                </st>"
+      - ""
+  phase-2:
+    title: "<red>Phase 2"
+    subtitle: "<dark_red>The Awakening"
+    broadcast:
+      - ""
+      - "<st>                                                                                </st>"
+      - "                      <bold><red>PHASE 2: THE AWAKENING</bold>"
+      - ""
+      - "<dark_red>A chilling groan echoes from the crypts. The dead are restless and have begun to claw their way from the earth."
+      - ""
+      - "  <white>Objective:</white> <gold>Survive the horde and continue to gear up."
+      - "  <white>Threats:</white> <red>Blighted Husks</red> <gray>and</gray> <red>Lingering Souls</red> <gray>now roam the land."
+      - "  <white>Boss:</white> <gray>A powerful guardian is rumored to protect the secrets within the <dark_aqua>Manor's Basement</dark_aqua>."
+      - "<st>                                                                                </st>"
+      - ""
+  phase-3:
+    title: "<dark_purple>Phase 3"
+    subtitle: "<light_purple>The Blood Moon"
+    broadcast:
+      - ""
+      - "<st>                                                                                </st>"
+      - "                      <bold><dark_purple>PHASE 3: THE BLOOD MOON</bold>"
+      - ""
+      - "<light_purple>The moon bleeds across the sky, empowering the darkness. Its crimson light has drawn the attention of a legendary evil."
+      - ""
+      - "  <white>Objective:</white> <gold>Withstand the empowered horde and face a great evil."
+      - "  <white>Threats:</white> <red>Enraged Zombies</red> <gray>and</gray> <red>Bogged Assassins</red> <gray>join the hunt."
+      - "  <white>Boss:</white> <dark_purple>The <bold>Headless Horseman</bold></dark_purple> <gray>now rides, seeking souls to claim!"
+      - "<st>                                                                                </st>"
+      - ""
+  phase-4-rampage:
+    title: "<gradient:#ff0000:#5a0000><bold>THE RAMPAGE</bold>"
+    subtitle: "<dark_red>Seek Sanctuary!"
+    broadcast:
+      - ""
+      - "<st>                                                                                </st>"
+      - "              <bold><gradient:#ff0000:#5a0000>PHASE 4: THE HARBINGER'S RAMPAGE</gradient></bold>"
+      - ""
+      - "<dark_red>The air crackles with malevolent energy. The Harbinger's patience has worn thin! Its power washes over the land."
+      - ""
+      - "  <white>Objective:</white> <gold>Reach the sanctuary of the <dark_red>Hallowed Church</dark_red>!"
+      - "  <white>Threats:</white> <red>Intense environmental effects</red><gray>. Fail to reach the church before the timer ends, and you will be <bold>eliminated</bold>!"
+      - "<st>                                                                                </st>"
+      - ""
+  phase-5-lms:
+    title: "<gradient:#ffc300:#c70039><bold>THE FINAL RECKONING</bold>"
+    subtitle: "<gold>Last One Standing"
+    broadcast:
+      - ""
+      - "<st>                                                                                </st>"
+      - "       <bold><gradient:#ffc300:#c70039>THE FINAL RECKONING HAS BEGUN</gradient></bold>"
+      - ""
+      - "<gray>The church doors have sealed. You are trapped with the remaining survivors as the Harbinger watches."
+      - ""
+      - "  <white>Objective:</white> <red>Eliminate all other players to prove your worth."
+      - "  <white>Threats:</white> <yellow>Other Players</yellow> <gray>and the</gray> <dark_red>Harbinger's Wrath</dark_red><gray>."
+      - "<st>                                                                                </st>"
+      - ""
+  rampage-all-safe: "<green>All survivors have reached the sanctuary. The final battle will now commence..."
+  rampage-kill: "<dark_red><player> was consumed by the Harbinger's rage for failing to reach the sanctuary."
+
+  # End of game messages
+  winner: "<gradient:#facc15:#eab308><bold>EVENT OVER!</bold></gradient> <white>Congratulations to <gold><winner></gold> for being the last one standing!"
+  no-winner: "<gradient:#facc15:#eab308><bold>EVENT OVER!</bold></gradient> <white>The night has claimed all souls. There is no winner."
+
+# -------------------------------------------------------------------
+# Player Experience Messages
+# -------------------------------------------------------------------
+player:
+  eliminated: "<gradient:#b91c1c:#dc2626>»</gradient> <gray><player> has been eliminated."
+  pvp-disabled: "<gradient:#facc15:#eab308>»</gradient> <red>Your fight is not with each other... yet."
+  harbinger-attack: "<gradient:#5a0000:#ff0000><bold>The Harbinger's gaze falls upon <player>!</bold></gradient>"
+  artifact-cooldown: "<red>This artifact is on cooldown for <seconds> more seconds."
+  weeping-bell-use: "<aqua>You ring the bell, releasing a wave of sorrow!"
+  weeping-bell-affected: "<dark_aqua>The sorrowful chime of the Weeping Bell slows your pace..."
+  boss-barrier-message: "<red>You cannot escape while the Manor Guardian is alive!"
+  witch-barrier-message: "<red>You cannot escape while the Warlock of the Mire is alive!"
+  sanctuary-barrier-message: "<dark_red><bold>You cannot leave the sanctuary!</bold>"
+
+# -------------------------------------------------------------------
+# Loot & Puzzle Messages
+# -------------------------------------------------------------------
+loot:
+  # Loot Chests
+  chest-opened: "<green>You open the container..."
+  chest-already-looted: "<yellow>You have already taken an item from here."
+  item-returned: "<gray>You closed the container without taking your loot, so it has been returned to you."
+
+  # Artifacts
+  artifact-found: "<#ffc300><player></#ffc300> <gray>has found the <artifact>!"
+  artifact-already-found: "<red>The <artifact> <red>has already been claimed by <player>!"
+
+  # Puzzles
+  offering-failure: "<red>The altar remains dormant. You need <required> souls, but only offer <current>."
+  offering-success: "<gray>The altar consumes the souls!<i> A faint, ethereal click echoes as a <gold>Crypt Key</gold> materializes."
+  wither-rose-pickup-hint: "<italic><gray>You feel a dark energy from the rose... It yearns to be placed where knowledge and magic intertwine."
+
+# -------------------------------------------------------------------
+# Final Battle Messages
+# -------------------------------------------------------------------
+final-battle:
+  teleport: "<gradient:#dc2626:#b91c1c><bold>The final battle is imminent! You are being teleported to the church...</bold></gradient>"
+  countdown: "<gradient:#facc15:#eab308><bold>PvP begins in <seconds>...</bold></gradient>"
+  start: "<gradient:#ef4444:#dc2626><bold>FIGHT!</bold></gradient>"
+
+# -------------------------------------------------------------------
+# Miscellaneous Messages
+# -------------------------------------------------------------------
+misc:
+  # Resource Pack
+  resource-pack-prompt: "<gold>This server requires a resource pack for the best experience. Please accept it."
+  resource-pack-kick: "<red>You must accept the server's resource pack to join the event."
+
+  # Staff and Errors
+  staff-bypass: "<gold>You have been excluded from the event because you are a staff member.</gold>"
+  error-no-start-location: "<red><bold>EVENT ERROR:</bold> The game start location has not been set in the config! Contact an administrator.</red>"
+  error-no-players: "<red>The event could not start because there are no participating players online.</red>"
+
+  # Boss Spawns
+  attic-guardian-spawn: "<gradient:#38bdf8:#818cf8><bold>A chilling shriek echoes from the manor's basement! The Manor Guardian has awoken!</bold></gradient>"
+  witch-spawn: "<gradient:#582f0e:#780000><bold>Cackling echoes from the swamp... The Warlock of the Mire has appeared!</bold></gradient>"
+  horseman-spawn: "<dark_red>Hoofbeats echo in the night... The <gradient:#ff0000:#8B0000><bold>Headless Horseman</bold></gradient> seeks vengeance!</dark_red>"
+
+  # Final Rankings
+  winner-announcement: "<gold>Congratulations to <winner>, the final survivor of Hallow's End!</gold>"
+  winner-announcement-unknown: "<gold>The Hallow's End event has concluded!</gold>" # Fallback if winner name not found
+  rankings-header: "<dark_gray>⎯⎯<white>[ <gradient:#ffc300:#c70039>Hallow's End Final Rankings</gradient> ]<dark_gray>⎯⎯"
+  rankings-entry: "  <gold>#<rank></gold> <gray>-</gray> <white><player>"
+  rankings-footer: "<dark_gray>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯"
+
+# -------------------------------------------------------------------
+# Item Names (Loaded by specific managers, not MessageManager)
+# -------------------------------------------------------------------
+items:
+  crypt-key-name: "<gradient:#8E2DE2:#4A00E0><!i><bold>Ominous Crypt Key</bold></gradient>"
+  soul-name: "<gradient:#222222:#550000:#aa0000><b>Wicked's Soul</b></gradient>"
+  soul-lore:
+    - "<gray>A fragment of a tormented spirit."
+    - ""
+    - "<dark_gray>A restless soul fragment. Gather ten and bring them to the church altar...."
+  witchs-rose-name: "<gradient:#c9184a:#800f2f><!i><bold>Heart-Tainted Rose</bold></gradient>"
+  witchs-rose-lore:
+    - "<gray>It pulses with a faint, unnatural warmth."
+    - "<gray>It yearns to be placed where knowledge and magic intertwine."
+# -------------------------------------------------------------------
+# Death & Respawn Messages
+# -------------------------------------------------------------------
+respawn:
+  title: "<dark_red>NOT YET..."
+  subtitle: "<gray>The night is not finished with you."
+  chat: "<red>The spirits of Hallow's End drag you back from the brink! You have been spared... for now."
+
+death-messages:
+  fire:
+    - "<red><victim><gray> was burned at the stake by <killer>."
+  pvp:
+    - "<red><victim><gray> was sent to the afterlife by <killer>."
+    - "<red><victim><gray> couldn't escape the clutches of <killer>."
+    - "<red><victim><gray>'s story ends at the hands of <killer>."
+    - "<red><victim><gray> was outplayed and sent to the spirit realm by <killer>."
+    - "<red><victim><gray>'s light was extinguished by the relentless <killer>."
+    - "<red><victim><gray> was no match for the might of <killer>."
+    - "<red><victim><gray>'s desperate struggle was ended by <killer>."
+    - "<red><victim><gray> became another ghost haunting the grounds, thanks to <killer>."
+    - "<red><victim><gray> was vanquished by a fatal blow from <killer>."
+    - "<red><victim><gray> joined the legion of the dead, courtesy of <killer>."
+  mob:
+    - "<red><victim><gray> was dragged into the shadows by a <mob>."
+    - "<red><victim><gray> became a midnight snack for a <mob>."
+    - "<red><victim><gray> learned the true meaning of fear from a <mob>."
+    - "<red><victim><gray>'s soul was harvested by a <mob>."
+    - "<red><victim><gray>'s screams were silenced by a grotesque <mob>."
+    - "<red><victim><gray> was cornered and devoured by a <mob>."
+    - "<red><victim><gray> fell prey to a hunting <mob>."
+    - "<red><victim><gray>'s nightmare became reality in the form of a <mob>."
+    - "<red><victim><gray> was ripped limb from limb by a merciless <mob>."
+    - "<red><victim><gray> met a gruesome end at the claws of a <mob>."
+  fall:
+    - "<red><victim><gray> discovered gravity is a cruel mistress."
+    - "<red><victim><gray> tested the ground's durability with their body."
+    - "<red><victim><gray> answered the call of the chasm."
+  void:
+    - "<red><victim><gray> was erased from existence."
+    - "<red><victim><gray> stepped into the abyss, and the abyss did not step back."
+    - "<red><victim><gray> faded into the eternal nothingness."
+  generic:
+    - "<red><victim><gray> met a grizzly end."
+    - "<red><victim><gray> succumbed to the horrors of the night."
+    - "<red><victim><gray>'s spirit was severed from their body."
+    - "<red><victim><gray> played with fire and lost."
+    - "<red><victim><gray> drowned in sorrow (and probably water)."
+
+holograms:
+  inheritance-chest: "<gold><player>'s Inheritance"
+
+artifact-found: "<gold><player></gold> <yellow>has obtained the <aqua><artifact></aqua>!"
+wither-rose-pickup-hint: "<light_purple><i>This withered rose... it feels drawn to the Warlock's room on the 3rd floor... An earthen pot might hold her secrets.</i></light_purple>"
+join-prompt: "<gold>The Hallow's End event is in progress! Type <yellow>/he join</yellow> to participate!"
+artifact-inventory-full: "<red>Your inventory is full! <gray>The <white><artifact></white> has been dropped at your feet!</gray></red>"

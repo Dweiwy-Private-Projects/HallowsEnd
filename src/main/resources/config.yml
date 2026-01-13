@@ -1,0 +1,1115 @@
+# Hallow's End Event Configuration
+
+game-settings:
+  # The permission node that will exclude a player from the event.
+  staff-bypass-permission: "hallowsend.staff"
+
+  # Duration of each phase in seconds.
+  phase-durations:
+    intro_cutscene: -1
+    phase_1_calm: 900
+    phase_2_awakening: 1200
+    phase_3_blood_moon: 1200
+    phase_4_rampage: 120
+    phase_5_lms: -1
+
+  # The location where all players will be teleported when the game starts.
+  start-location:
+    ==: org.bukkit.Location
+    world: "world"
+    x: 246.0
+    y: -57.0
+    z: 1020.0
+    yaw: 180.0
+    pitch: -5.0
+
+  rampage:
+    slowness-intensity: 4
+    scary-sound-chance: 0.15
+    jumpscare-chance: 0.10
+    jumpscare-sound: "ENTITY_WITHER_HURT"
+    jumpscare-head-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmFlN2I1NTY2OTI3M2VkM2YxYjYxOGM2M2NhZGMxMzc5MzBjZDI5YTVhM2U5Y2M0OWE0ZWE0YjlkOTE4YTdmMyJ9fX0="
+    pvp-skip-to-seconds: 10
+    grace-period-seconds: 30
+    # FIX #1: Added damage value for players caught outside
+    damage-per-strike: 10.0 # (10.0 = 5 hearts)
+
+  # Settings for the final battle in the church.
+  final-battle:
+    pvp-countdown-seconds: 10
+
+  cutscene-start-location:
+    ==: org.bukkit.Location
+    world: "world"
+    x: 246.0
+    y: -55.0
+    z: 1020.0
+    pitch: -5.0
+    yaw: 180.0
+
+  cutscene-nodes:
+    node-1:
+      location:
+        ==: org.bukkit.Location
+        world: "world"
+        x: 165.0
+        y: -55.0
+        z: 934.5
+        pitch: 7.5
+        yaw: 90.0
+      duration: 10
+      travel-time: 8
+      title: "<gray>Whispers in the Dark"
+      subtitle: "<gray>Who... or what... is that?"
+      chat: |
+        
+        <st>                                                                                </st>
+          <gray>You feel a presence nearby... a voice, old and cracked, whispers on the wind.
+        
+          <white><italic>"They are desperate... good."</italic>
+        
+          <gray>It seems to be watching some... <yellow>Villagers</yellow>?
+          Perhaps they know more and talking to them will be beneficial.
+        <st>                                                                                </st>
+
+    node-2:
+      location:
+        ==: org.bukkit.Location
+        world: "world"
+        x: 247.5
+        y: -27.0
+        z: 918.5
+        pitch: 20.4
+        yaw: -139.2
+      duration: 10
+      travel-time: 8
+      title: "<dark_red>The Hallowed Church"
+      subtitle: "<gray>A broken sanctuary for a broken land."
+      chat: |
+        
+        <st>                                                                                </st>
+          <gray>A church, standing defiant against the encroaching rot.
+        
+          Its bell is silent, its pews empty... but you feel a faint aura of <gold>protection</gold>.
+          A place to rest... a place to hide.
+        <st>                                                                                </st>
+
+    node-3:
+      location:
+        ==: org.bukkit.Location
+        world: "world"
+        x: 347.5
+        y: -7.0
+        z: 1120.5
+        pitch: 19.2
+        yaw: 22.6
+      duration: 10
+      travel-time: 8
+      title: "<dark_purple>The Weeping Manor"
+      subtitle: "<gray>A dark history sleeps within."
+      chat: |
+        
+        <st>                                                                                </st>
+          <gray>The manor looms over the village, a monument to forgotten sins.
+        
+          Lights flicker in the attic, though the place has been abandoned for years.
+          <italic>Something</italic> powerful rests in its <dark_aqua>deepest chambers</dark_aqua>.
+        <st>                                                                                </st>
+
+    node-4:
+      location:
+        ==: org.bukkit.Location
+        world: "world"
+        x: 240.0
+        y: -41.0
+        z: 1153.0
+        pitch: 9.2
+        yaw: -34.5
+      duration: 8
+      travel-time: 8
+      title: "<gold>The Warlock's Hut"
+      subtitle: "<gray>What foul brews bubble within the hut?"
+      chat: |
+        
+        <st>                                                                                </st>
+          <gray>A crooked hut sinks into the mire, its chimney puffing strange, <green>green</green> smoke.
+        
+          The air smells of sweet flowers... and rotting flesh.
+          Only a fool would challenge the <dark_aqua>Warlock</dark_aqua> in his domain.
+        <st>                                                                                </st>
+
+    node-5:
+      location:
+        ==: org.bukkit.Location
+        world: "world"
+        x: 113.0
+        y: -33.0
+        z: 1072.0
+        pitch: 30.0
+        yaw: 120.0
+      duration: 8
+      travel-time: 10
+      title: "<gray>The Forgotten Grave"
+      subtitle: "<gray>The dead are not at rest here."
+      chat: |
+        
+        <st>                                                                                </st>
+          <gray>Far from the village, a crypt lies in this land... a foul energy radiates from it.
+        
+          You hear a sound... a <red>scream</red>... but there is no one in sight.
+          Only a <red>cage</red> where it appears to be coming from...
+        <st>                                                                                </st>
+
+    node-6:
+      location:
+        ==: org.bukkit.Location
+        world: "world"
+        x: 246.0
+        y: -55.0
+        z: 1020.0
+        pitch: -5.0
+        yaw: 180.0
+      duration: 5
+      travel-time: 8
+      title: "<red><bold>The Night Begins..."
+      subtitle: "<gray>May you be the one to survive it."
+      chat: |
+        
+        <bold><red>                        Good luck.</red></bold>
+
+# Server-side resource pack settings
+resource-pack:
+  enabled: false
+  required: true
+  url: "DIRECT_DOWNLOAD_URL_HERE"
+  hash: "SHA1_HASH_HERE" # Must be 40 characters, lowercase
+
+# Mob Spawning Configuration
+mob-spawning:
+  mob-cap-per-player: 4
+  spawn-radius: 32
+  harbinger-attack-chance: 0
+
+  phase-2-mobs:
+    BLIGHTED_HUSK:
+      type: HUSK
+      name: "<gold>Blighted Husk"
+      health: 25.0
+      spawn-chance: 0.6
+    LINGERING_SOUL:
+      type: SKELETON
+      name: "<gray>Lingering Soul"
+      potion-effects: [ "INVISIBILITY:999999:0" ]
+      equipment: { helmet: LEATHER_HELMET }
+      spawn-chance: 0.4
+
+  phase-3-mobs:
+    ENRAGED_ZOMBIE:
+      type: ZOMBIE
+      name: "<red>Enraged Zombie"
+      health: 30.0
+      speed-multiplier: 1
+      equipment: { mainhand: STONE_SWORD }
+      spawn-chance: 0.7
+    BOGGED_ASSASSIN:
+      type: BOGGED
+      name: "<dark_green>Bogged Assassin"
+      spawn-chance: 0.3
+
+  bosses:
+    HEADLESS_HORSEMAN:
+      type: SKELETON
+      name: "<gradient:#ff0000:#8B0000><bold>Headless Horseman</bold></gradient>"
+      health: 1024.0
+      potion-effects: [ "REGENERATION:999999:2" ]
+      speed-multiplier: 1.2
+      scale: 1.5
+      equipment:
+        helmet: CARVED_PUMPKIN
+        mainhand: DIAMOND_AXE
+    MANOR_EVOKER:
+      type: EVOKER
+      name: "<dark_aqua><bold>Manor Guardian</bold>"
+      health: 1000.0
+      potion-effects: [ "REGENERATION:999999:2" ]
+      speed-multiplier: 1.1
+    WITCH_OF_THE_MIRE:
+      type: ILLUSIONER
+      name: "<dark_purple><bold>Warlock of the Mire</bold>"
+      health: 1000.0
+      potion-effects: [ "REGENERATION:999999:2" ]
+      speed-multiplier: 1.0
+      scale: 0.7
+    HARBINGER:
+      type: ALLAY
+      name: "<gradient:#5a0000:#ff0000><bold>The Harbinger</bold></gradient>"
+      health: 1000.0
+      potion-effects: [ "INVISIBILITY:999999:0" ]
+      scale: 4.0
+
+# Loot System Configuration
+loot-system:
+  mob-drops:
+    BLIGHTED_HUSK:
+      - { material: "GHAST_TEAR", chance: 0.25, min-amount: 1, max-amount: 1 }
+    LINGERING_SOUL:
+      - { material: "GHAST_TEAR", chance: 0.25, min-amount: 1, max-amount: 1 }
+    ENRAGED_ZOMBIE:
+      - { material: "GHAST_TEAR", chance: 0.25, min-amount: 1, max-amount: 1 }
+    BOGGED_ASSASSIN:
+      - { material: "GHAST_TEAR", chance: 0.25, min-amount: 1, max-amount: 1 }
+
+scoreboard-areas:
+  church:
+    title: "<dark_red>The Hallowed Church"
+    objectives:
+      DEFAULT: "<gray>Pray for your survival."
+      PHASE_1_CALM: "<gray>Exchange the wicked souls..."
+      PHASE_5_LMS: "<gray>Be the last man standing!"
+    world: "world"
+    y-min: -47
+    y-max: -20
+    corners:
+      - { x: 241, z: 890 }
+      - { x: 287, z: 890 }
+      - { x: 287, z: 840 }
+      - { x: 277, z: 840 }
+      - { x: 277, z: 825 }
+      - { x: 251, z: 825 }
+      - { x: 251, z: 840 }
+      - { x: 241, z: 840 }
+
+  manor-attic:
+    title: "<dark_red><bold>Basement"
+    objectives:
+      DEFAULT: "<red>Spooky sounds echo..."
+      PHASE_2_AWAKENING: "<red>Defeat the Guardian"
+    world: "world"
+    y-min: -62
+    y-max: -54
+    corners:
+      - { x: 320, z: 1168 }
+      - { x: 290, z: 1168 }
+      - { x: 290, z: 1145 }
+      - { x: 320, z: 1145 }
+
+  manor:
+    title: "<dark_purple><bold>Weeping Manor"
+    objectives:
+      DEFAULT: "<gray>Explore the mysterious manor..."
+      PHASE_1_CALM: "<gray>The air is still... too still."
+      PHASE_2_AWAKENING: "<yellow>Find the Weeping Bell."
+    world: "world"
+    y-min: -64
+    y-max: -14
+    corners:
+      - { x: 306, z: 1145 }
+      - { x: 345, z: 1145 }
+      - { x: 345, z: 1187 }
+      - { x: 306, z: 1187 }
+  crypt:
+    title: "<gray><bold>The Sunken Crypt"
+    objectives:
+      DEFAULT: "<gray>Find the Crypt Lord's Skull"
+    world: "world"
+    y-min: 40
+    y-max: 60
+    corners: # This rectangle is fine
+      - { x: -50, z: 100 }
+      - { x: -20, z: 100 }
+      - { x: -20, z: 130 }
+      - { x: -50, z: 130 }
+  witch-hut:
+    title: "<gold><bold>Warlock's Hut"
+    objectives:
+      DEFAULT: "<yellow>Brewing trouble..."
+      PHASE_1_CALM: "<gray>The smell of potion lingers..."
+      PHASE_3_BLOOD_MOON: "<yellow>Defeat the Warlock"
+    world: "world"
+    y-min: -42
+    y-max: -30
+    corners:
+      - { x: 251, z: 1162 }
+      - { x: 239, z: 1162 }
+      - { x: 239, z: 1180 }
+      - { x: 251, z: 1180 }
+
+event-objects:
+  crypt-trial-spawner:
+    ==: org.bukkit.Location
+    world: "world"
+    x: 271.0
+    y: -45.0
+    z: 838.0
+  crypt-vault:
+    ==: org.bukkit.Location
+    world: "world"
+    x: 80.0
+    y: -46.0
+    z: 1058.0
+  library-puzzle-pot:
+    ==: org.bukkit.Location
+    world: "world"
+    x: 245.0
+    y: -34.0
+    z: 1164.0
+  library-puzzle-piston:
+    ==: org.bukkit.Location
+    world: "world"
+    x: -200.0
+    y: -50.0
+    z: 98.0
+
+# Define all custom items here.
+custom-items:
+  potion_of_health:
+    material: "PLAYER_HEAD"
+    name: "<gradient:#ffafcc:#bde0fe><!i><bold>Elixir of Health</bold></gradient>"
+    lore:
+      - "<gray><!i>A potent brew that mends wounds instantly."
+      - ""
+      - "<light_purple><!i>Right-click to consume."
+    texture: "da00c53cf57cacc7f5e8e3fe84b2f5db122cd76fced780a953b99639fb319882"
+    effects:
+      - "INSTANT_HEALTH:1:0"
+  potion_of_regen:
+    material: "PLAYER_HEAD"
+    name: "<gradient:#55a630:#aacc00><!i><bold>Draught of Regeneration</bold></gradient>"
+    lore:
+      - "<gray><!i>Slowly knits flesh and bone back together."
+      - ""
+      - "<green><!i>Right-click to consume."
+    texture: "36be266db2bb1f0c3e473287178862498510b0fb727d73caf064917677b4f4f6"
+    effects:
+      - "REGENERATION:8:0"
+  potion_of_strength:
+    material: "PLAYER_HEAD"
+    name: "<gradient:#e71d36:#fca311><!i><bold>Vial of Strength</bold></gradient>"
+    lore:
+      - "<gray><!i>Fills the user with unnatural might."
+      - ""
+      - "<red><!i>Right-click to consume."
+    texture: "f1f909cc1c32da3b11603944d4f731d63baa9ade1e1211ddf9f0155091c5c94b"
+    effects:
+      - "STRENGTH:15:0"
+
+# Ritual Artifact Settings
+ritual-artifacts:
+  weeping-bell:
+    cooldown-seconds: 45
+    ability-radius: 12.0
+    slowness-duration-seconds: 7
+    slowness-amplifier: 0 # (0=Slow I, 1=Slow II, 2=Slow III)
+  cursed-ledger:
+    cooldown-seconds: 90
+    wolf-count: 3
+    wolf-duration-seconds: 20
+  crypt-lords-skull:
+    lifesteal-percent: 0.20 # (0.20 = 20%)
+
+phase-1-loot-chests:
+  marco_brothers_sword:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 96
+      y: -48
+      z: 1032
+    display-name: "<gradient:#6c757d:#adb5bd><!i><bold>Grave of the Brothers</bold></gradient>"
+    empty-message: "<gray>His grave is empty now. May the swords serve a greater purpose."
+    already-looted-message: "<dark_gray>You have already searched this grave."
+    loot-items:
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Buried Blade" }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Brother's Legacy", lore: ["<gray><!i>A fine blade, buried with its owner."] }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Brother's Legacy", lore: ["<gray><!i>A fine blade, buried with its owner."] }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Brother's Legacy", lore: ["<gray><!i>A fine blade, buried with its owner."] }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Brother's Legacy", lore: ["<gray><!i>A fine blade, buried with its owner."] }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Brother's Legacy", lore: ["<gray><!i>A fine blade, buried with its owner."] }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Brother's Legacy", lore: ["<gray><!i>A fine blade, buried with its owner."] }
+  farmer_lost_pumpkin:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 400
+      y: -47
+      z: 880
+    display-name: "<gradient:#fb8500:#ffb703><!i><bold>The Farmer's Stash</bold></gradient>"
+    empty-message: "<gold>The pumpkin is just an empty shell now."
+    already-looted-message: "<gold>You've already taken what you need."
+    loot-bundles:
+      - bundle:
+          - { custom-id: "potion_of_health" }
+          - { material: "PUMPKIN_PIE", amount: 6, name: "<gold><!i>Hearty Pie" }
+          - { material: "GOLDEN_AXE", name: "<gold><!i>Farmer's Lost Axe" }
+        amount: 30
+  wind_mill:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 366
+      y: -44
+      z: 1035
+    display-name: "<gradient:#003049:#669bbc><!i><bold>Wind's Blessings</bold></gradient>"
+    empty-message: "<dark_gray>Only dust and debris remain in the mill."
+    already-looted-message: "<dark_blue>The mill's depths hold no more secrets for you."
+    loot-items:
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Iron Leggings", lore: ["<gray><!i>Broken off the windmill's cogs.."] }
+  piek_roof_offering:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 141
+      y: -47
+      z: 952
+    display-name: "<gradient:#ffc300:#ffd60a><!i><bold>A Rooftop Offering</bold></gradient>"
+    empty-message: "<yellow>The rooftop offering has been claimed."
+    already-looted-message: "<yellow>The offering has already served its purpose."
+    loot-bundles:
+      - bundle:
+          - { material: "IRON_HELMET", name: "<white><!i>Prayer Helm" }
+          - { material: "IRON_BOOTS", name: "<white><!i>Silent Steps" }
+          - { material: "POPPY", name: "<red><!i>Offering Rose" }
+        amount: 15
+  jean_whispering_tree:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 149
+      y: -58
+      z: 1096
+    display-name: "<gradient:#582f0e:#7f4f24><!i><bold>The Whispering Tree</bold></gradient>"
+    empty-message: "<dark_purple>The whispers have faded."
+    already-looted-message: "<dark_green>The tree has nothing more to say to you."
+    loot-items:
+      - { material: "DIAMOND_BOOTS", name: "<aqua><!i>Grave-Worn Treads" }
+      - { material: "DIAMOND_BOOTS", name: "<aqua><!i>Grave-Worn Treads" }
+      - { material: "DIAMOND_BOOTS", name: "<aqua><!i>Grave-Worn Treads" }
+      - { material: "DIAMOND_BOOTS", name: "<aqua><!i>Grave-Worn Treads" }
+      - { material: "DIAMOND_BOOTS", name: "<aqua><!i>Grave-Worn Treads" }
+      - { material: "DIAMOND_BOOTS", name: "<aqua><!i>Grave-Worn Treads" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+      - { material: "IRON_BOOTS", name: "<gray><!i>Mourner's Boots" }
+  hortense_chiefs_wealth:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 375
+      y: -48
+      z: 952
+    display-name: "<gradient:#e71d36:#ff9b54><!i><bold>The Chief's Cache</bold></gradient>"
+    empty-message: "<red>The ghosts have claimed what little was left."
+    already-looted-message: "<dark_red>You've taken all the spectral wealth you can carry."
+    loot-bundles:
+      - bundle:
+          - { material: "IRON_CHESTPLATE", name: "<white><!i>Chief's Guard" }
+          - { material: "GOLDEN_APPLE", amount: 2, name: "<gold><!i>Ghostly Essence" }
+          - { material: "STONE_SWORD", name: "<dark_gray><!i>Haunted Blade" }
+        amount: 24
+  lenora_fathers_axe:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 386
+      y: -56
+      z: 1009
+    display-name: "<gradient:#0077b6:#00b4d8><!i><bold>A Father's Belongings</bold></gradient>"
+    empty-message: "<dark_green>Her father's axe is gone."
+    already-looted-message: "<blue>The heirloom has been passed on."
+    loot-items:
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "IRON_AXE", name: "<gray><!i>Dad's Old Axe" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+      - { material: "DIAMOND_AXE", name: "<blue><!i>Family Heirloom" }
+  eliza_breathing_barrels:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 397
+      y: -41
+      z: 1095
+    display-name: "<gradient:#219ebc:#8ecae6><!i><bold>      Breathing Barrels</bold></gradient>"
+    empty-message: "<dark_aqua>The breathing has stopped."
+    already-looted-message: "<aqua>The strange barrels are now still."
+    loot-bundles:
+      - bundle:
+          - { material: "BOW", name: "<yellow><!i>Fisherman's Bow" }
+          - { material: "ARROW", amount: 8 }
+        amount: 24
+  clara_crying_child:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 362
+      y: -57
+      z: 1017
+    display-name: "<gradient:#ffafcc:#ffc8dd><!i><bold>      A Child's Possessions</bold></gradient>"
+    empty-message: "<light_purple>The crying has ceased."
+    already-looted-message: "<light_purple>The spirit is at peace now."
+    loot-bundles:
+      - bundle:
+          - { material: "DIAMOND_LEGGINGS", name: "<aqua><!i>Child's Protection" }
+          - { material: "BREAD", amount: 5, name: "<gold><!i>Last Meal" }
+        amount: 15
+  verena_witch_victim:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 251
+      y: -45
+      z: 1138
+    display-name: "<gradient:#800f2f:#c9184a><!i><bold>       Victim of a Curse</bold></gradient>"
+    empty-message: "<dark_red>His grave has been looted."
+    already-looted-message: "<red>There is nothing left but cursed soil."
+    loot-items:
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Avenger's Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "GOLDEN_HELMET", name: "<gold><!i>Hopeful Helm" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+      - { material: "IRON_AXE", name: "<dark_gray><!i>Makeshift Axe" }
+  lottie_monster_victim:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 190
+      y: -41
+      z: 1133
+    display-name: "<gradient:#ced4da:#e9ecef><!i><bold>    Remains on the Mountain</bold></gradient>"
+    empty-message: "<gray>Only bones are left on the mountain."
+    already-looted-message: "<gray>The mountain winds have picked the bones clean."
+    loot-bundles:
+      - bundle:
+          - { material: "DIAMOND_BOOTS", name: "<aqua><!i>Climber's Boots" }
+          - { material: "IRON_SWORD", name: "<white><!i>Explorer's Sword" }
+        amount: 15
+  thalia_witchs_ruins:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 327
+      y: -47
+      z: 1180
+    display-name: "<gradient:#5a189a:#9d4edd><!i><bold>        Witch's Ruins</bold></gradient>"
+    empty-message: "<dark_purple>The last of the witch's magic has faded."
+    already-looted-message: "<light_purple>You've already drawn from the fading magic."
+    loot-bundles:
+      - bundle:
+          - { custom-id: "potion_of_regen" }
+          - { custom-id: "potion_of_strength" }
+          - { material: "GOLDEN_APPLE", amount: 3, name: "<gold><!i>Warlock's Apple" }
+        amount: 30
+  hester_sunken_gold:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 166
+      y: -46
+      z: 880
+    display-name: "<gradient:#fca311:#fec89a><!i><bold>         Sunken Gold</bold></gradient>"
+    empty-message: "<aqua>The currents have washed the gold away."
+    already-looted-message: "<gold>You've claimed your share of the treasure."
+    loot-bundles:
+      - bundle:
+          - { material: "GOLDEN_APPLE", amount: 2, name: "<gold><!i>Sunken Treasure" }
+          - { material: "GOLDEN_CHESTPLATE", name: "<gold><!i>Drifter's Plate" }
+          - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Cutlass" }
+        amount: 15
+  gideon_armorsmith_tools:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 166
+      y: -56
+      z: 921
+    display-name: "<gradient:#495057:#adb5bd><!i><bold>      The Old Armory</bold></gradient>"
+    empty-message: "<dark_gray>The armory is bare."
+    already-looted-message: "<gray>The armory's finest pieces are already in your possession."
+    loot-bundles:
+      - bundle:
+          - { material: "GOLDEN_LEGGINGS", name: "<gold><!i>Smith's Greaves" }
+          - { material: "GOLDEN_BOOTS", name: "<gold><!i>Smith's Sabatons" }
+        amount: 18
+  armin_farm_tools:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 426
+      y: -47
+      z: 1013
+    display-name: "<gradient:#80b918:#bfd200><!i><bold>      Abandoned Farm Tools</bold></gradient>"
+    empty-message: "<dark_green>The farm has no more tools to spare."
+    already-looted-message: "<green>You've already picked the shed clean."
+    loot-items:
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Harvester's Blade" }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Harvester's Blade" }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Harvester's Blade" }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Harvester's Blade" }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Harvester's Blade" }
+      - { material: "DIAMOND_SWORD", name: "<aqua><!i>Harvester's Blade" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded ScBlythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Scythe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+      - { material: "STONE_SWORD", name: "<dark_gray><!i>Sharpened Hoe" }
+  miriam_wolf_den:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 77
+      y: -47
+      z: 958
+    display-name: "<gradient:#6c757d:#dee2e6><!i><bold>        The Wolf Den</bold></gradient>"
+    empty-message: "<gray>The den is empty, the hunter long gone."
+    already-looted-message: "<white>You've taken the spoils of the hunt."
+    loot-items:
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "IRON_SWORD", name: "<white><!i>Wolfslayer" }
+      - { material: "DIAMOND_AXE", name: "<aqua><!i>Alpha's Bane" }
+      - { material: "DIAMOND_AXE", name: "<aqua><!i>Alpha's Bane" }
+      - { material: "DIAMOND_AXE", name: "<aqua><!i>Alpha's Bane" }
+      - { material: "DIAMOND_AXE", name: "<aqua><!i>Alpha's Bane" }
+      - { material: "DIAMOND_AXE", name: "<aqua><!i>Alpha's Bane" }
+      - { material: "DIAMOND_AXE", name: "<aqua><!i>Alpha's Bane" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Hunter's Garb" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Beastmaster's Armor" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Beastmaster's Armor" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Beastmaster's Armor" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Beastmaster's Armor" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Beastmaster's Armor" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Beastmaster's Armor" }
+  dorian_broken_shield:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 189
+      y: -17
+      z: 1158
+    display-name: "<gradient:#343a40:#6c757d><!i><bold>     A Warrior's Last Stand</bold></gradient>"
+    empty-message: "<dark_gray>The battle on the mountain is over."
+    already-looted-message: "<gray>You've salvaged what you could from the battlefield."
+    loot-bundles:
+      - bundle:
+          - { material: "SHIELD", name: "<white><!i>Dorian's Shield" }
+          - { material: "IRON_AXE", name: "<white><!i>Mountain Axe" }
+          - { material: "GOLDEN_SWORD", name: "<gold><!i>Gilded Blade" }
+        amount: 15
+      - bundle:
+          - { material: "SHIELD", name: "<white><!i>Dorian's Shield" }
+        amount: 15
+  rhea_family_ashes:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 330
+      y: -59
+      z: 944
+    display-name: "<gradient:#212529:#495057><!i><bold>       Ashes of a Family</bold></gradient>"
+    empty-message: "<dark_red>The graves are cold and empty."
+    already-looted-message: "<dark_gray>Let the ashes rest."
+    loot-items:
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "DIAMOND_HELMET", name: "<aqua><!i>Rhea's Hope" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_LEGGINGS", name: "<gray><!i>Soot-Stained Greaves" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+      - { material: "IRON_HELMET", name: "<gray><!i>Charred Casque" }
+  manor_pond_chest:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 339
+      y: -46
+      z: 1155
+    display-name: "<gradient:#219ebc:#8ecae6><!i><bold>Sunken Chest</bold></gradient>"
+    empty-message: "<dark_aqua>The pond is still."
+    already-looted-message: "<aqua>You've already disturbed the water."
+    loot-bundles:
+      - bundle:
+          - { material: "BOW", name: "<yellow><!i>Waterlogged Bow" }
+          - { material: "ARROW", amount: 8 }
+        amount: 24
+  graveyard_chest_20:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 153
+      y: -59
+      z: 1028
+    display-name: "<gradient:#6c757d:#adb5bd><!i><bold>Disturbed Grave</bold></gradient>"
+    empty-message: "<gray>The grave is empty."
+    already-looted-message: "<dark_gray>You have already searched this grave."
+    loot-items:
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Glive-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Grave-Worn Plate" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<aqua><!i>Buried Finery" }
+  graveyard_chest_21:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 256
+      y: -46
+      z: 829
+    display-name: "<gradient:#6c757d:#adb5bd><!i><bold>Church Chest</bold></gradient>"
+    empty-message: "<gray>The chest is empty."
+    already-looted-message: "<dark_gray>You have already looted this chest."
+    loot-items:
+      - { material: "DIAMOND_SWORD", name: "<white><!i>Blessed Blade" }
+      - { material: "DIAMOND_SWORD", name: "<white><!i>Blessed Blade" }
+      - { material: "DIAMOND_SWORD", name: "<white><!i>Blessed Blade" }
+      - { material: "DIAMOND_SWORD", name: "<white><!i>Blessed Blade" }
+      - { material: "DIAMOND_SWORD", name: "<white><!i>Blessed Blade" }
+      - { material: "IRON_SWORD", name: "<white><!i>Steel Edge" }
+      - { material: "IRON_SWORD", name: "<white><!i>Steel Edge" }
+      - { material: "IRON_SWORD", name: "<white><!i>Steel Edge" }
+      - { material: "IRON_SWORD", name: "<white><!i>Steel Edge" }
+      - { material: "IRON_SWORD", name: "<white><!i>Steel Edge" }
+      - { material: "IRON_AXE", name: "<white><!i>Faith Splitter" }
+      - { material: "IRON_AXE", name: "<white><!i>Faith Splitter" }
+      - { material: "IRON_AXE", name: "<white><!i>Faith Splitter" }
+      - { material: "IRON_AXE", name: "<white><!i>Faith Splitter" }
+      - { material: "IRON_AXE", name: "<white><!i>Faith Splitter" }
+  warlocks_cache:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 240
+      y: -37
+      z: 1163
+    display-name: "<gradient:#6c757d:#adb5bd><!i><bold>Warlock’s Cache</bold></gradient>"
+    empty-message: "<gray>The chest is empty."
+    already-looted-message: "<dark_gray>You have already looted this chest."
+    loot-bundles:
+      - bundle:
+          - { custom-id: "potion_of_regen" }
+          - { custom-id: "potion_of_strength" }
+          - { material: "GOLDEN_APPLE", amount: 3, name: "<gold><!i>Warlock's Apple" }
+        amount: 10
+  graveyard_chest_23:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 232
+      y: -58
+      z: 950
+    display-name: "<gradient:#6c757d:#adb5bd><!i><bold>Mid Chest I</bold></gradient>"
+    empty-message: "<gray>The chest is empty."
+    already-looted-message: "<dark_gray>You have already looted this chest."
+    loot-items:
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Steel Chestplate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Steel Chestplate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Steel Chestplate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Steel Chestplate" }
+      - { material: "IRON_CHESTPLATE", name: "<white><!i>Steel Chestplate" }
+      - { material: "IRON_LEGGINGS", name: "<white><!i>Steel Leggings" }
+      - { material: "IRON_LEGGINGS", name: "<white><!i>Steel Leggings" }
+      - { material: "IRON_LEGGINGS", name: "<white><!i>Steel Leggings" }
+      - { material: "IRON_LEGGINGS", name: "<white><!i>Steel Leggings" }
+      - { material: "IRON_LEGGINGS", name: "<white><!i>Steel Leggings" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<white><!i>Diamond Chestplate" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<white><!i>Diamond Chestplate" }
+      - { material: "DIAMOND_CHESTPLATE", name: "<white><!i>Diamond Chestplate" }
+      - { material: "DIAMOND_LEGGINGS", name: "<white><!i>Diamond Leggings" }
+      - { material: "DIAMOND_LEGGINGS", name: "<white><!i>Diamond Leggings" }
+      - { material: "DIAMOND_LEGGINGS", name: "<white><!i>Diamond Leggings" }
+  graveyard_chest_24:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 296
+      y: -60
+      z: 1020
+    display-name: "<gradient:#6c757d:#adb5bd><!i><bold>Mid Chest II</bold></gradient>"
+    empty-message: "<gray>The chest is empty."
+    already-looted-message: "<dark_gray>You have already looted this chest."
+    loot-items:
+      - { material: "DIAMOND_AXE", name: "<white><!i>Diamond Axe" }
+      - { material: "DIAMOND_AXE", name: "<white><!i>Diamond Axe" }
+      - { material: "DIAMOND_AXE", name: "<white><!i>Diamond Axe" }
+      - { material: "IRON_AXE", name: "<white><!i>Iron Axe" }
+      - { material: "IRON_AXE", name: "<white><!i>Iron Axe" }
+      - { material: "IRON_AXE", name: "<white><!i>Iron Axe" }
+      - { material: "IRON_AXE", name: "<white><!i>Iron Axe" }
+      - { material: "IRON_AXE", name: "<white><!i>Iron Axe" }
+      - { material: "STONE_AXE", name: "<white><!i>Stone Axe" }
+      - { material: "STONE_AXE", name: "<white><!i>Stone Axe" }
+      - { material: "STONE_AXE", name: "<white><!i>Stone Axe" }
+      - { material: "STONE_AXE", name: "<white><!i>Stone Axe" }
+      - { material: "STONE_AXE", name: "<white><!i>Stone Axe" }
+  graveyard_chest_25:
+    location:
+      ==: org.bukkit.Location
+      world: "world"
+      x: 251
+      y: -45
+      z: 859
+    display-name: "<gradient:#6c757d:#adb5bd><!i><bold>Church Chest II</bold></gradient>"
+    empty-message: "<gray>The chest is empty."
+    already-looted-message: "<dark_gray>You have already looted this chest."
+    loot-items:
+      - { material: "DIAMOND_BOOTS", name: "<white><!i>Diamond Boots" }
+      - { material: "DIAMOND_BOOTS", name: "<white><!i>Diamond Boots" }
+      - { material: "DIAMOND_BOOTS", name: "<white><!i>Diamond Boots" }
+      - { material: "DIAMOND_HELMET", name: "<white><!i>Diamond Helmet" }
+      - { material: "DIAMOND_HELMET", name: "<white><!i>Diamond Helmet" }
+      - { material: "DIAMOND_HELMET", name: "<white><!i>Diamond Helmet" }
+      - { material: "IRON_BOOTS", name: "<white><!i>Iron Boots" }
+      - { material: "IRON_BOOTS", name: "<white><!i>Iron Boots" }
+      - { material: "IRON_BOOTS", name: "<white><!i>Iron Boots" }
+      - { material: "IRON_BOOTS", name: "<white><!i>Iron Boots" }
+      - { material: "IRON_BOOTS", name: "<white><!i>Iron Boots" }
+      - { material: "IRON_HELMET", name: "<white><!i>Iron Helmet" }
+      - { material: "IRON_HELMET", name: "<white><!i>Iron Helmet" }
+      - { material: "IRON_HELMET", name: "<white><!i>Iron Helmet" }
+      - { material: "IRON_HELMET", name: "<white><!i>Iron Helmet" }
+      - { material: "IRON_HELMET", name: "<white><!i>Iron Helmet" }

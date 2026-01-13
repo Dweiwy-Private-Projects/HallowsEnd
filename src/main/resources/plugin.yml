@@ -1,0 +1,18 @@
+name: HallowsEnd
+version: '1.0.0'
+main: me.siwannie.hallowsend.HallowsEnd
+api-version: '1.21'
+author: Siwannie
+depend: [PlaceholderAPI]
+commands:
+  hallowsend:
+    description: Main command for the Hallow's End event.
+    aliases: [he]
+    usage: "/hallowsend <join|start|stop|reload>"
+permissions:
+  hallowsend.admin:
+    description: Allows usage of admin commands for the Hallow's End event.
+    default: op
+  hallowsend.join:
+    description: Allows players to join the Hallow's End event.
+    default: true # This gives the permission to all non-op players
